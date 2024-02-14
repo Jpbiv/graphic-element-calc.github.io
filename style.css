@@ -19,7 +19,7 @@ body {
 }
 
 .container {
-    width: 90%;
+    width: 780px;
     height: 90%;
     margin: 0 auto;
     display: flex;
@@ -93,4 +93,12 @@ margin-left: 5%;
     background: #ffffff;
     color: #323232;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card-note2 {
+    font-size: 0.7rem;
+    padding: 1rem 0rem;
 }
