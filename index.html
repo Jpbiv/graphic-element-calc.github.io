@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Graphic element calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <script src="script.js"></script>
+    <div class="container">
+        <div class="card card-1">
+            <div class="card-header">Calculator</div>
+            <div class="card-body">Type in the artwork measurements for the short side and long side and it will calculate the margin, window radius, window gap, and line thickness. 
+            </div>
+            <div class="card-note">Note: If your artwork is in pixels, round up to the nearest whole number.</div>
+            <div class="userinput"> Short Side
+                <input type="text" id="shortside" placeholder="680" onkeyup="updateMargin()"> </div>
+            <div class="userinput"> Long Side
+                <input type="text" id="longside" placeholder="400" onkeyup="updateMargin()"> </div>
+            <div class="card-body"> 
+                <p>
+                    <span class="detail"></span>Margin(x):
+                    <span id="marginresult" class="big-number">0</span>
+                    </p> 
+                <p>
+                    <span class="detail"></span>Window radius (2x):
+                    <span id="windowradiusresult" class="big-number">0</span>
+                    </p>
+                <p>
+                    <span class="detail"></span>Window gap (2/3x):
+                    <span id="windowgapresult" class="big-number">0</span>
+                    </p>
+                <p>
+                    <span class="detail"></span>Line thickness (x/15):
+                    <span id="linethicknessresult" class="big-number">0</span>
+                    </p>
+            </div>
+            <div class="card-note">The unit values are the same as the input, and not pt.</div>
+        </div>
+        <div class="card card-2">
+            <div class="card-header">
+                Graphic element calculator</div>
+            <div class="card-body">
+                Type in the artwork measurements for the short side and long side and it will calculate the margin, window radius, window gap, and line thickness.
+            </div>
+            <div class="card-note">Margin Ratio</div>
+                <div class="card-ratio">Margin (x) = (Short side / 25) * ( 1 + ( Long side / short side) / 10 )</div>
+        </div>
+        </div>
+    </div>
+    
+    </div>
+</body>
+</html>
