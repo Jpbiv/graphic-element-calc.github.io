@@ -1,9 +1,9 @@
 function updateMargin() {
-    var shortside = parseFloat (document.getElementById('shortside').value);
-    var longside = parseFloat (document.getElementById('longside').value);
+    var width = parseFloat (document.getElementById('width').value);
+    var height = parseFloat (document.getElementById('height').value);
 
-    if (!isNaN(shortside) && !isNaN(longside) && longside !== 0) {
-    var margin = (shortside / 25) * (1+(longside/shortside)/10);
+    if (!isNaN(height) && !isNaN(width) && width !== 0) {
+    var margin = (height / 25) * (1+(width/height)/10);
     var windowradius = margin * 2; 
     var windowgap = (2/3) * margin;
     var linethickness = margin / 15;

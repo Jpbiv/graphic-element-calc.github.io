@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+.img-card {
+    width: 100%;
+    height: auto;
+}
+
 h1 { 
     text-align: center;
 }
@@ -34,7 +39,7 @@ body {
    margin: 0 auto;
    background: #011E41;
    color: white;
-   padding: 2rem 2.5rem 4rem;
+   padding: 2rem 2rem 4rem;
    border-radius: 37.44px;
    width: 380px;
    height: 450px;
@@ -90,6 +95,7 @@ margin-left: 5%;
 }
 
 .card-2{
+    padding: 2rem 1.5rem 4rem;
     background: #ffffff;
     color: #323232;
     text-align: center;
@@ -102,3 +108,5 @@ margin-left: 5%;
     font-size: 0.7rem;
     padding: 1rem 0rem;
 }
+
+
