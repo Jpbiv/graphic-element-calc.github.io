@@ -5,7 +5,7 @@ function updateMargin() {
     if (!isNaN(height) && !isNaN(width)) {
     var margin = (height / 25) * (1+(width/height)/10);
         if (height > width) {
-            document.getElementById('marginresult').innerText = "Longside shorter than Short Side";
+            document.getElementById('marginresult').innerText = "Doh! Longside smaller than Short Side";
             document.getElementById('windowradiusresult').innerText = "0";
             document.getElementById('windowgapresult').innerText = "0";
             document.getElementById('linethicknessresult').innerText = "0";
