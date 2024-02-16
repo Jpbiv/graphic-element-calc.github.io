@@ -13,10 +13,10 @@ function updateMargin() {
     var windowradius = margin * 2; 
     var windowgap = (2/3) * margin;
     var linethickness = margin / 15;
-    document.getElementById('marginresult').innerText = margin.toFixed(2);
-    document.getElementById('windowradiusresult').innerText = windowradius.toFixed(2);
-    document.getElementById('windowgapresult').innerText = windowgap.toFixed(2);
-    document.getElementById('linethicknessresult').innerText = linethickness.toFixed(2);
+    document.getElementById('marginresult').innerText = margin.toFixed(0);
+    document.getElementById('windowradiusresult').innerText = windowradius.toFixed(0);
+    document.getElementById('windowgapresult').innerText = windowgap.toFixed(0);
+    document.getElementById('linethicknessresult').innerText = linethickness.toFixed(0);
         }
     } else {
         document.getElementById('marginresult').innerText = "0";
