@@ -72,6 +72,10 @@ body {
     padding: 1rem 0rem;
 }
 
+select {
+margin-bottom: 24px;
+}
+
 .card-input {
     align-items: left;
 }

@@ -16,8 +16,11 @@
         <div class="card card-1">
             <div class="card-header">Calculator</div>
             <div class="card-body">Type in the artwork measurements for the short side and long side and it will calculate the margin, window radius, window gap, and line thickness. 
-            </div>
-            <div class="card-note">Note: If your artwork is in pixels, round up to the nearest whole number.</div>
+            </div><br>
+            <select id="unit" onchange="updateMargin()">
+                <option value="px">Pixels</option>
+                <option value="mm">Millimeters</option>
+            </select>
             <div class="userinput"> Long Side
                 <input type="text" id="width" placeholder="1920" onkeyup="updateMargin()"> </div>
             <div class="userinput"> Short Side
@@ -40,7 +43,6 @@
                     <span id="linethicknessresult" class="big-number">0</span>
                     </p>
             </div>
-            <div class="card-note">The unit values are the same as the input, and not pt.</div>
         </div>
         <div class="card card-2">
             <p class="card-header">Finding Margin(x)</p>
