@@ -68,10 +68,17 @@ function updateResults(width, height, unit) {
 
     let roundFunc = (unit === 'px') ? (num) => num.toFixed(0) : (num) => num.toFixed(2);
 
-    document.getElementById('marginresult').innerText = roundFunc(margin);
-    document.getElementById('windowradiusresult').innerText = roundFunc(windowRadius);
-    document.getElementById('windowgapresult').innerText = roundFunc(windowGap);
-    document.getElementById('linethicknessresult').innerText = roundFunc(lineThickness);
+    if (unit === 'px') {
+    document.getElementById('marginresult').innerText = roundFunc(margin) + " px";
+    document.getElementById('windowradiusresult').innerText = roundFunc(windowRadius) + " px";
+    document.getElementById('windowgapresult').innerText = roundFunc(windowGap) + " px";
+    document.getElementById('linethicknessresult').innerText = roundFunc(lineThickness) + " px";
+    } else {
+        document.getElementById('marginresult').innerText = roundFunc(margin) + " mm";
+        document.getElementById('windowradiusresult').innerText = roundFunc(windowRadius)+ " mm";
+        document.getElementById('windowgapresult').innerText = roundFunc(windowGap)+ " mm";
+        document.getElementById('linethicknessresult').innerText = roundFunc(lineThickness)+ " mm";
+    }
 }
 
 function updateMargin() {
