@@ -44,6 +44,10 @@ function calculateWindowRadius(margin) {
     return margin * 2;
 }
 
+function calculateCopyMargin(margin) {
+    return margin * 1.5;
+}
+
 function calculateWindowGap(margin) {
     return (2 / 3) * margin;
 }
@@ -58,6 +62,7 @@ function resetResults(partial = false) {
     document.getElementById('windowradiusresult').innerText = "0";
     document.getElementById('windowgapresult').innerText = "0";
     document.getElementById('linethicknessresult').innerText = "0";
+    document.getElementById('copymarginresult').innerText = "0";
 }
 
 function updateResults(width, height, unit) {
@@ -65,6 +70,7 @@ function updateResults(width, height, unit) {
     let windowRadius = calculateWindowRadius(margin);
     let windowGap = calculateWindowGap(margin);
     let lineThickness = calculateLineThickness(margin);
+    let copyMargin = calculateCopyMargin(margin);
 
     let roundFunc = (unit === 'px') ? (num) => num.toFixed(0) : (num) => num.toFixed(2);
 
@@ -73,11 +79,13 @@ function updateResults(width, height, unit) {
     document.getElementById('windowradiusresult').innerText = roundFunc(windowRadius) + " px";
     document.getElementById('windowgapresult').innerText = roundFunc(windowGap) + " px";
     document.getElementById('linethicknessresult').innerText = roundFunc(lineThickness) + " px";
+    document.getElementById('copymarginresult').innerText = roundFunc(copyMargin) + " px";
     } else {
         document.getElementById('marginresult').innerText = roundFunc(margin) + " mm";
         document.getElementById('windowradiusresult').innerText = roundFunc(windowRadius)+ " mm";
         document.getElementById('windowgapresult').innerText = roundFunc(windowGap)+ " mm";
         document.getElementById('linethicknessresult').innerText = roundFunc(lineThickness)+ " mm";
+        document.getElementById('copymarginresult').innerText = roundFunc(copyMargin)+ " mm";
     }
 }
 
